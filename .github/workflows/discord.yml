@@ -22,6 +22,7 @@ jobs:
         uses: rhullah/github-releases-to-discord@more-description-formatting
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+          reduce_headings: true
       - name: on-success
         if: github.event.workflow_run.conclusion == 'success'
         uses: Ilshidur/action-discord@master
